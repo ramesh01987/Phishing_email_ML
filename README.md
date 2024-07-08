@@ -13,3 +13,21 @@ The dataset includes multiple CSV files, each representing different email datas
 - **Enron.csv**
 - **Ling.csv**
 - **Nazario.csv**
+
+In our case we are going to focus on phishing_email.csv
+
+## Model Building 
+
+Given the dataset's characteristics, we opt for a supervised learning approach using Support Vector Machines (SVM).
+
+Steps:
+
+    Data Preprocessing: Text data is vectorized using TF-IDF to convert it into numerical format suitable for SVM.
+
+    Handling Imbalance: The dataset is imbalanced, so we use RandomUnderSampler to balance the classes.
+
+    Model Training: SVM model is trained using the balanced data.
+
+    Evaluation: Model performance metrics such as accuracy, precision, recall, and F1-score are calculated and visualized using confusion matrix and PR curve.
+
+    Saving the Model: The trained SVM model is saved for future use.
